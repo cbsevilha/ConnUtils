@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  charm_pipeline:
+    image: pipelines
+    container_name: data_pipelines
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    network_mode: host
